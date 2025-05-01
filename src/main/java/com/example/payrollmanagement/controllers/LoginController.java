@@ -5,9 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.stage.Stage;
-
+import javafx.scene.control.*;
 import java.sql.*;
 
 public class LoginController {
@@ -26,7 +25,7 @@ public class LoginController {
     private void handleLogin() {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        String role = roleComboBox.getValue();
+        String role = roleComboBox.getValue(); // Get the selected role
 
         if (username.isEmpty() || password.isEmpty() || role == null) {
             statusLabel.setText("Please enter username, password, and select a role.");
@@ -38,7 +37,7 @@ public class LoginController {
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, username);
             stmt.setString(2, password);
-            stmt.setString(3, role);
+            stmt.setString(3, role); // Verify role alongside username and password
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
@@ -94,16 +93,36 @@ public class LoginController {
 
     @FXML
     private void handleRegister() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/payrollmanagement/register.fxml"));
-            Parent root = loader.load();
-            Stage registerStage = new Stage();
-            registerStage.setTitle("Register New User");
-            registerStage.setScene(new Scene(root));
-            registerStage.show();
-        } catch (Exception e) {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        String role = roleComboBox.getValue(); // Get the selected role
+
+        if (username.isEmpty() || password.isEmpty() || role == null) {
+            statusLabel.setText("Please fill in all fields and select a role.");
+            return;
+        }
+
+        try (Connection conn = DBConnection.getConnection()) {
+            String checkQuery = "SELECT * FROM users WHERE username = ?";
+            PreparedStatement checkStmt = conn.prepareStatement(checkQuery);
+            checkStmt.setString(1, username);
+            ResultSet rs = checkStmt.executeQuery();
+
+            if (rs.next()) {
+                statusLabel.setText("Username already exists.");
+            } else {
+                String insertQuery = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
+                PreparedStatement insertStmt = conn.prepareStatement(insertQuery);
+                insertStmt.setString(1, username);
+                insertStmt.setString(2, password);
+                insertStmt.setString(3, role); // Insert the selected role into the database
+                insertStmt.executeUpdate();
+
+                statusLabel.setText("Registration successful! You can now log in.");
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
-            statusLabel.setText("Failed to open registration window.");
+            statusLabel.setText("Database error.");
         }
     }
 }
