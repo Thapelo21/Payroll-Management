@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.payrollmanagement.controllers.LoginController"
+      style="-fx-background-color: linear-gradient(to bottom right, #e6f0ff, #c4dcff);">
+
+  <!-- Header with decorative elements -->
+  <StackPane>
+    <Rectangle arcWidth="15" arcHeight="15" width="350" height="80"
+               fill="linear-gradient(to right, #3a7bd5, #00d2ff)"/>
+    <Label text="PAYROLL SYSTEM" style="-fx-font-weight: bold; -fx-font-size: 28; -fx-text-fill: white;">
+      <font>
+        <Font name="Arial Rounded MT Bold" size="28"/>
+      </font>
+      <effect>
+        <DropShadow color="rgba(0,0,0,0.3)" radius="5" spread="0.5"/>
+      </effect>
+    </Label>
+  </StackPane>
+
+  <!-- Form Container with subtle shadow -->
+  <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 2);">
+
+    <!-- Input Fields -->
+    <TextField fx:id="usernameField" promptText="Username" prefWidth="300" prefHeight="45"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 12; -fx-background-insets: 0;">
+      <effect>
+        <InnerShadow color="#3a7bd555" radius="5"/>
+      </effect>
+    </TextField>
+
+    <PasswordField fx:id="passwordField" promptText="Password" prefWidth="300" prefHeight="45"
+                   style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-font-size: 14; -fx-padding: 12;">
+      <effect>
+        <InnerShadow color="#3a7bd555" radius="5"/>
+      </effect>
+    </PasswordField>
+
+    <ComboBox fx:id="roleComboBox" prefWidth="300" promptText="Select Role"
+              style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #3a7bd5; -fx-background-color: white; -fx-font-size: 14; -fx-padding: 8;">
+      <effect>
+        <DropShadow color="#3a7bd533" radius="3" spread="0.3"/>
+      </effect>
+    </ComboBox>
+
+    <!-- Buttons with hover effects using CSS pseudo-classes -->
+    <Button text="LOGIN" onAction="#handleLogin" prefWidth="300" prefHeight="45"
+            style="
+                    -fx-background-radius: 8;
+                    -fx-font-weight: bold;
+                    -fx-font-size: 16;
+                    -fx-text-fill: white;
+                    -fx-cursor: hand;
+                    -fx-background-color: linear-gradient(to right, #3a7bd5, #00d2ff);
+                    -fx-effect: dropshadow(gaussian, #3a7bd5, 5, 0.3, 0, 0);
+                ">
+      <padding>
+        <Insets top="12" bottom="12"/>
+      </padding>
+    </Button>
+
+    <Button text="REGISTER" onAction="#handleRegister" prefWidth="300" prefHeight="40"
+            style="
+                    -fx-background-radius: 8;
+                    -fx-font-weight: bold;
+                    -fx-font-size: 15;
+                    -fx-text-fill: #3a7bd5;
+                    -fx-background-color: transparent;
+                    -fx-border-color: #3a7bd5;
+                    -fx-border-width: 2;
+                    -fx-border-radius: 8;
+                    -fx-cursor: hand;
+                ">
+    </Button>
+  </VBox>
+
+  <!-- Status Label -->
+  <Label fx:id="statusLabel" style="-fx-text-fill: #ff4757; -fx-font-weight: bold; -fx-font-size: 13;">
+    <effect>
+      <Glow/>
+    </effect>
+  </Label>
+
+</VBox>

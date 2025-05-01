@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="25" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.payrollmanagement.controllers.EmployeeDashboardController"
+      style="-fx-background-color: #f5f9ff;">
+    <padding>
+        <Insets top="50" right="50" bottom="50" left="50"/>
+    </padding>
+
+    <!-- Simple Header -->
+    <Label text="Employee Portal"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1a3a8f;"/>
+
+    <!-- Buttons Container -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 30; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10,0,0,0);">
+        <Button text="View Payslip" onAction="#openPayslip"
+                style="-fx-background-color: #4a89dc; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 4; -fx-padding: 10 25; -fx-min-width: 200;"/>
+
+        <Button text="Logout" onAction="#handleLogout"
+                style="-fx-background-color: #e6e9f0; -fx-text-fill: #5d6d8a; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 4; -fx-padding: 10 25; -fx-min-width: 200;"/>
+    </VBox>
+</VBox>

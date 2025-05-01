@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.payrollmanagement.controllers.EmployeeController"
+            style="-fx-background-color: linear-gradient(to bottom, #f0f7ff, #cce0ff);">
+
+    <top>
+        <Label text="EMPLOYEE MANAGEMENT"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2a4a7f; -fx-padding: 20; -fx-background-color: linear-gradient(to right, #3a7bd5, #00d2ff); -fx-background-radius: 0 0 10 10; -fx-alignment: CENTER; -fx-effect: dropshadow(gaussian, rgba(0,0,100,0.3), 8, 0.5, 0, 2);">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="28"/>
+            </font>
+        </Label>
+    </top>
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <TableView fx:id="employeeTable" prefHeight="350" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 2); -fx-background-color: white; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #a0c1ed; -fx-border-width: 1.5;">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="60" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                    <TableColumn fx:id="nameColumn" text="NAME" prefWidth="180" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                    <TableColumn fx:id="departmentColumn" text="DEPARTMENT" prefWidth="150" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                    <TableColumn fx:id="positionColumn" text="POSITION" prefWidth="150" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                    <TableColumn fx:id="salaryColumn" text="BASIC SALARY" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                    <TableColumn fx:id="hoursColumn" text="WORK HOURS" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: white; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.5, 0, 1);">
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <TextField fx:id="nameField" promptText="Full Name" prefWidth="200" prefHeight="35"
+                           style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-padding: 8;"/>
+                <TextField fx:id="departmentField" promptText="Department" prefWidth="180" prefHeight="35"
+                           style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-padding: 8;"/>
+                <TextField fx:id="positionField" promptText="Position" prefWidth="180" prefHeight="35"
+                           style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-padding: 8;"/>
+            </HBox>
+
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <TextField fx:id="salaryField" promptText="Basic Salary" prefWidth="180" prefHeight="35"
+                           style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-padding: 8;"/>
+                <TextField fx:id="hoursField" promptText="Working Hours" prefWidth="180" prefHeight="35"
+                           style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #3a7bd5; -fx-border-width: 1.5; -fx-padding: 8;"/>
+            </HBox>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="ADD EMPLOYEE" onAction="#handleAddEmployee" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #3a7bd5; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+                <Button text="EDIT SELECTED" onAction="#handleEditEmployee" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #5c8ae6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+                <Button text="DELETE SELECTED" onAction="#handleDeleteEmployee" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #ff4757; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            </HBox>
+
+            <HBox spacing="15" alignment="CENTER_RIGHT">
+                <Button text="BACK TO DASHBOARD" onAction="#handleBackToDashboard" prefWidth="200" prefHeight="40"
+                        style="-fx-background-color: #2a5bb4; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>

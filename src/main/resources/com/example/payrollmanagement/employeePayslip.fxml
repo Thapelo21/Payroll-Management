@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.payrollmanagement.controllers.EmployeePayslipController"
+      style="-fx-background-color: #f4f4f4;">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Employee Payslip"
+           style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Employee Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="lblEmployeeName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Employee ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="lblEmployeeID" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Gross Salary:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="lblGrossSalary" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Net Salary:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="lblNetSalary" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="Salary Breakdown:"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+    <TextArea fx:id="txtSalaryBreakdown" editable="false" wrapText="true"
+              prefWidth="400" prefHeight="200" style="-fx-font-size: 14px;"/>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Print Payslip" onAction="#handlePrintPayslip"
+                style="-fx-background-color: #34A853; -fx-text-fill: white;" prefWidth="150"/>
+        <Button text="Back" onAction="#handleBack"
+                style="-fx-background-color: #4285F4; -fx-text-fill: white;" prefWidth="150"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.payrollmanagement.controllers.PayrollController"
+            style="-fx-background-color: linear-gradient(to bottom, #f0f7ff, #cce0ff);">
+
+    <top>
+        <Label text="PAYROLL MANAGEMENT"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 20; -fx-background-color: linear-gradient(to right, #3a7bd5, #00d2ff); -fx-background-radius: 0 0 10 10; -fx-alignment: CENTER; -fx-effect: dropshadow(gaussian, rgba(0,0,100,0.3), 8, 0.5, 0, 2);">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="28"/>
+            </font>
+        </Label>
+    </top>
+
+    <center>
+        <TableView fx:id="employeeTable" prefHeight="350"
+                   style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #a0c1ed; -fx-border-width: 1.5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 2);">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="60" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="nameColumn" text="NAME" prefWidth="140" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="positionColumn" text="POSITION" prefWidth="110" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="basicSalaryColumn" text="BASIC SALARY" prefWidth="110" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="hoursColumn" text="WORK HOURS" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="grossSalaryColumn" text="GROSS SALARY" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="taxColumn" text="TAX" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="insuranceColumn" text="INSURANCE" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="deductionsColumn" text="DEDUCTIONS" prefWidth="130" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="netSalaryColumn" text="NET SALARY" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: white; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.5, 0, 1);">
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="CALCULATE SALARY" onAction="#handleCalculateSalary" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #3a7bd5; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+                <Button text="EXPORT TO CSV" onAction="#handleExportPayrollCSV" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #5c8ae6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+                <Button text="EXPORT TO PDF" onAction="#handleExportPayrollPDF" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #4c7ad6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+                <Button text="BACK TO DASHBOARD" onAction="#handleBackToDashboard" prefWidth="180" prefHeight="40"
+                        style="-fx-background-color: #2a5bb4; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
