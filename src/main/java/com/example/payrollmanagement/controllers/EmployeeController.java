@@ -44,7 +44,7 @@ public class EmployeeController {
         employeeTable.setItems(employeeList);
         loadEmployees();
 
-        // ⚡ NEW: when selecting an employee, populate fields
+
         employeeTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 populateEmployeeFields(newSelection);

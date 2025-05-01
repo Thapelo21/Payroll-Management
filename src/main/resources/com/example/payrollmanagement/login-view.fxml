@@ -11,7 +11,7 @@
       fx:controller="com.example.payrollmanagement.controllers.LoginController"
       style="-fx-background-color: linear-gradient(to bottom right, #e6f0ff, #c4dcff);">
 
-  <!-- Header with decorative elements -->
+
   <StackPane>
     <Rectangle arcWidth="15" arcHeight="15" width="350" height="80"
                fill="linear-gradient(to right, #3a7bd5, #00d2ff)"/>
@@ -50,7 +50,7 @@
       </effect>
     </ComboBox>
 
-    <!-- Buttons with hover effects using CSS pseudo-classes -->
+
     <Button text="LOGIN" onAction="#handleLogin" prefWidth="300" prefHeight="45"
             style="
                     -fx-background-radius: 8;

@@ -42,7 +42,7 @@
         </Label>
     </StackPane>
 
-    <!-- Shimmering Buttons Container -->
+
     <VBox alignment="CENTER" spacing="25">
         <!-- Employee Button -->
         <Button fx:id="employeeButton" text="👥  Manage Employees" onAction="#openEmployeeManagement"
