@@ -50,14 +50,13 @@
                 style="-fx-background-color: linear-gradient(to right, #4b6cb7, #182848); -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-background-radius: 30; -fx-padding: 16 50; -fx-cursor: hand; -fx-effect: innershadow(gaussian, rgba(255,255,255,0.5), 10, 0.5, 0, 1);"
                 prefWidth="380"/>
 
-        <!-- Payroll Button (Updated with Maloti context) -->
-        <Button text="💰  Process Payroll (M)"
+
+        <Button text="💰  Process Payroll ($)"
                 onAction="#openPayrollManagement"
                 style="-fx-background-color: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb); -fx-text-fill: #1a2a6c; -fx-font-size: 18px; -fx-font-weight: bold; -fx-background-radius: 30; -fx-padding: 16 50; -fx-cursor: hand; -fx-effect: innershadow(gaussian, rgba(255,255,255,0.7), 15, 0.7, 0, 1);"
                 prefWidth="380"/>
 
-        <!-- Reports Button (Updated with Maloti context) -->
-        <Button text="📊  Payroll Reports (M)"
+        <Button text="📊  Payroll Reports ($)"
                 onAction="#openReports"
                 style="-fx-background-color: linear-gradient(to right, #396afc, #2948ff); -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-background-radius: 30; -fx-padding: 16 50; -fx-cursor: hand; -fx-effect: innershadow(gaussian, rgba(255,255,255,0.5), 10, 0.5, 0, 1);"
                 prefWidth="380"/>
