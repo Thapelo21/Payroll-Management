@@ -84,7 +84,7 @@ public class ReportsController {
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT SUM(basic_salary + working_hours * 20) AS total_expenses FROM employees")) {
             if (rs.next()) {
-                totalExpensesLabel.setText("Total Payroll Expenses: $" + String.format("%.2f", rs.getDouble("total_expenses")));
+                totalExpensesLabel.setText("Total Payroll Expenses: M" + String.format("%.2f", rs.getDouble("total_expenses")));
             }
         } catch (Exception e) {
             System.out.println("Error loading total expenses: " + e.getMessage());

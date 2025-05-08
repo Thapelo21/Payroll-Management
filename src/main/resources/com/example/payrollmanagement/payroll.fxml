@@ -25,13 +25,13 @@
                 <TableColumn fx:id="idColumn" text="ID" prefWidth="60" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                 <TableColumn fx:id="nameColumn" text="NAME" prefWidth="140" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                 <TableColumn fx:id="positionColumn" text="POSITION" prefWidth="110" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                <TableColumn fx:id="basicSalaryColumn" text="BASIC SALARY" prefWidth="110" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="basicSalaryColumn" text="BASIC SALARY(M)" prefWidth="110" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                 <TableColumn fx:id="hoursColumn" text="WORK HOURS" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                <TableColumn fx:id="grossSalaryColumn" text="GROSS SALARY" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                <TableColumn fx:id="taxColumn" text="TAX" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                <TableColumn fx:id="insuranceColumn" text="INSURANCE" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                <TableColumn fx:id="deductionsColumn" text="DEDUCTIONS" prefWidth="130" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                <TableColumn fx:id="netSalaryColumn" text="NET SALARY" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="grossSalaryColumn" text="GROSS SALARY(M)" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="taxColumn" text="TAX(M)" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="insuranceColumn" text="INSURANCE(M)" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="deductionsColumn" text="DEDUCTIONS(M)" prefWidth="130" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                <TableColumn fx:id="netSalaryColumn" text="NET SALARY (M)" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
             </columns>
         </TableView>
     </center>

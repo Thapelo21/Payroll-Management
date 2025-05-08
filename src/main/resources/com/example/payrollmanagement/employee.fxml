@@ -26,7 +26,7 @@
                     <TableColumn fx:id="nameColumn" text="NAME" prefWidth="180" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                     <TableColumn fx:id="departmentColumn" text="DEPARTMENT" prefWidth="150" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                     <TableColumn fx:id="positionColumn" text="POSITION" prefWidth="150" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
-                    <TableColumn fx:id="salaryColumn" text="BASIC SALARY" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
+                    <TableColumn fx:id="salaryColumn" text="BASIC SALARY (M)" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                     <TableColumn fx:id="hoursColumn" text="WORK HOURS" prefWidth="120" style="-fx-font-weight: bold; -fx-text-fill: #2a4a7f;"/>
                 </columns>
             </TableView>
